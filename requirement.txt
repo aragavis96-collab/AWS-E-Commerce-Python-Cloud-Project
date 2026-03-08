@@ -1,0 +1,15 @@
+# software requirements
+
+python
+jupyter notebook
+MySQL Workbench
+Amazon S3
+Amazon Athena
+Streamlit
+
+# python libraries
+
+pandas
+numpy
+matplotlib
+seaborn
