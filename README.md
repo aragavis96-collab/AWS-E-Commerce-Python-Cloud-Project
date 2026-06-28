@@ -95,20 +95,19 @@ Streamlit Dashboard
 ```
 AWS-E-Commerce-Python-Cloud-Project
 │
-├── Dataset
+├── dataset
 │
-├── Python
-│   ├── Data Cleaning
-│   ├── EDA
-│   └── KPI Analysis
+├── python programming
+│   └── brazilian-ecommerce.ipynb
 │
-├── SQL
-│   └── Analysis Queries
+├── sql_queries
+│   └── athena_queries.sql
+│   └── mysql_queries.sql
 │
-├── Streamlit
-│   └── Dashboard
+├── streamlit
+│   └── app.py
 │
-├── Screenshots
+├── LICENSE
 │
 ├── README.md
 │
