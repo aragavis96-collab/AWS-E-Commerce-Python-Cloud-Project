@@ -1,105 +1,329 @@
-# AWS-E-Commerce-Python-Cloud-Project
-This project showcases a comprehensive data analytics workflow that utilizes Python and cloud technologies to examine an e-commerce dataset and produce insights. It involves data processing, database management, cloud-based querying, and dashboard visualization, emulating a basic data engineering pipeline.
+# AWS E-Commerce Python Cloud Project
 
-# Dataset discription
-The study makes use of the Brazilian E-Commerce Public Dataset from Olist, which consists of many CSV files that illustrate multiple facets of an e-commerce website.
-Dataset: https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce.
-Orders, customers, product details, payments, reviews, and sellers information are all included in these datasets.
+A complete end-to-end Data Analytics project that demonstrates how Python, SQL, and AWS cloud services can be used together to analyze an e-commerce dataset and generate business insights.
 
-# Project Overflow Diagram
-This figure shows the steps from dataset input to data processing in Python, SQL analysis, cloud storage in AWS S3, querying using AWS Athena, and visualization using Streamlit.
-<img width="900" height="500" alt="data analytics pipeline" src="https://github.com/user-attachments/assets/6250cd63-9938-46aa-827d-a68d2c8e5390" />
+This project follows a real-world analytics workflow starting from data preprocessing in Python, relational database implementation using MySQL, cloud storage in AWS S3, SQL querying with AWS Athena, and interactive dashboard development using Streamlit.
 
-# 📊 Data processing using python
-Python was used to import the dataset into a Jupyter Notebook for preliminary data exploration and analysis. This stage aided in comprehending the data's structure and getting it ready for additional processing and display.
+---
 
-Activities carried out:
--------
-📌Using Pandas to import datasets
+# Project Overview
 
-📌Examining the structure of datasets
+The objective of this project is to analyze the Brazilian E-Commerce Public Dataset by Olist and build a complete cloud-based analytics pipeline.
 
-📌Carrying out simple data cleansing
+The project includes:
 
-📌Performing fundamental statistical analysis
+- Data preprocessing using Python
+- Exploratory Data Analysis (EDA)
+- Data cleaning and transformation
+- Database creation using MySQL
+- SQL analysis
+- Cloud storage using AWS S3
+- Cloud querying using AWS Athena
+- Interactive dashboard using Streamlit
+   
+---
 
-📌Finding important KPIs like revenue and total orders
+# Dataset
 
-# 🗄️ Database implementation using MYSQL
-The datasets were imported into MySQL Workbench to establish a relational database environment following preliminary data analysis in Jupyter Notebook. This stage made it possible to store structured data and run SQL queries for further comprehensive examination.
+**Dataset Name**
 
-Steps Performed
--------
-📌Creating a database
-         
-📌CSV file importation into database tables
+Brazilian E-Commerce Public Dataset by Olist
 
-📌Running queries in SQL for analysis
+Dataset contains:
 
-Executed Example Queries
----------
-👉 Calculating the total quantity of orders
+- Customers
+- Orders
+- Order Items
+- Products
+- Sellers
+- Payments
+- Reviews
+- Geolocation
 
-👉 Finding the overall revenue
+Source:
+https://www.kaggle.com/datasets/olistbr/brazilian-ecommerce
 
-👉 Connecting several tables to do out relationship analysis
+---
 
-# ☁️ Cloud Storage Using AWS S3
-The project data was stored in a scalable secured cloud storage environment by uploading the CSV datasets to an Amazon S3 bucket. This facilitates the data's easy access and processing for additional analysis by various other cloud-based services.
+# Project Architecture
 
-Steps performed:
----------
-📂 Creating an S3 bucket
+Dataset
+↓
 
-📤 Uploading dataset files
+Python (Cleaning + EDA)
+↓
 
-✅ Verifying uploaded data
+MySQL Database
+
+↓
+
+AWS S3 Bucket
+
+↓
+
+AWS Athena Queries
+
+↓
+
+Streamlit Dashboard
+
+<img width="900" height="500" alt="data analytics pipeline" src="https://github.com/user-attachments/assets/6250cd63-9938-46aa-827d-a68d2c8e5390" /> 
+
+---
+
+# Technologies Used
+
+| Technology | Purpose |
+|------------|---------|
+| Python | Data Processing |
+| Pandas | Data Cleaning |
+| NumPy | Numerical Operations |
+| Matplotlib | Visualization |
+| Seaborn | Statistical Charts |
+| MySQL | Database |
+| SQL | Data Analysis |
+| AWS S3 | Cloud Storage |
+| AWS Athena | Cloud Query Engine |
+| Streamlit | Dashboard |
+| Git | Version Control |
+| GitHub | Project Hosting |
+
+---
+
+# Project Folder Structure
+
+```
+AWS-E-Commerce-Python-Cloud-Project
+│
+├── Dataset
+│
+├── Python
+│   ├── Data Cleaning
+│   ├── EDA
+│   └── KPI Analysis
+│
+├── SQL
+│   └── Analysis Queries
+│
+├── Streamlit
+│   └── Dashboard
+│
+├── Screenshots
+│
+├── README.md
+│
+└── requirements.txt
+```
+
+---
+
+# Data Processing using Python
+
+Python was used to import, clean, transform and analyze the datasets before storing them into the database.
+
+### Activities Performed
+
+- Imported CSV datasets using Pandas
+- Examined dataset structure
+- Handled missing values
+- Removed duplicate records
+- Converted data types
+- Performed feature engineering
+- Calculated KPIs
+- Generated summary statistics
+
+---
+
+# Exploratory Data Analysis
+
+Performed several exploratory analyses to understand customer behavior and business performance.
+
+Analysis included:
+
+- Order distribution
+- Revenue analysis
+- Product category analysis
+- Payment analysis
+- Customer analysis
+- Seller analysis
+
+---
+
+# Database Implementation using MySQL
+
+The cleaned datasets were imported into MySQL Workbench to create a relational database.
+
+### Steps Performed
+
+- Created Database
+- Created Tables
+- Imported CSV Files
+- Defined Primary Keys
+- Established Relationships
+- Executed SQL Queries
+
+---
+
+# Sample SQL Queries
+
+- Total Orders
+- Total Revenue
+- Average Order Value
+- Top Selling Categories
+- Monthly Sales
+- Customer Distribution
+- Payment Analysis
+- Seller Performance
+
+---
+
+# Cloud Storage using AWS S3
+
+The processed datasets were uploaded to Amazon S3 for scalable cloud storage.
+
+### Activities
+
+- Created S3 Bucket
+- Uploaded CSV Files
+- Verified Upload
+- Managed Storage
 
 <img width="700" height="200" alt="image" src="https://github.com/user-attachments/assets/4f45379b-c8d8-453b-a99a-8d0d40d39c5b" />
 
-# 🔎 Cloud Querying using AWS Athena 
-SQL queries were run directly on the datasets kept in the S3 bucket using Amazon Athena. This eliminated the requirement for a conventional database configuration and enabled effective querying and analysis of massive datasets.
+---
 
-Steps performed:
------
-📌Connecting Athena with S3
+# Cloud Querying using AWS Athena
 
-📌Creating external Tables referencing s3 data
+AWS Athena was used to execute SQL queries directly on files stored in Amazon S3 without loading them into a database.
 
-📌Executing SQL Queries
+### Activities
 
-Example Queries:
--------
-👉 Order status distribution
+- Connected Athena with S3
+- Created External Tables
+- Executed SQL Queries
+- Retrieved Results
 
-👉 Product Category Review Score 
+ <img width="660" height="301" alt="image" src="https://github.com/user-attachments/assets/e903ebb1-d4db-4654-9bc3-fa9a2cea598e" />
 
-<img width="660" height="301" alt="image" src="https://github.com/user-attachments/assets/e903ebb1-d4db-4654-9bc3-fa9a2cea598e" />
+---
 
-# 📈Data Visualization using Streamlit
-Streamlit was used to create a live dashboard that showed the primary results from the dataset. Streamlit assists in transforming data research findings into easily understood and interactive visual elements like graphs, charts, and metrics. This makes it simple for consumers to understand the important details and examine the data in an understandable and practical manner.
+# Dashboard using Streamlit
 
-Dashboard features include:
-------
-📌Total Orders metric
+An interactive dashboard was created using Streamlit to visualize important business metrics.
 
-Displays the total number of orders in the dataset, providing an overview of the overall transaction volume.
+Dashboard Features
 
-<img width="400" height="175" alt="image" src="https://github.com/user-attachments/assets/29236fd4-5ce2-4661-8d87-55d5330f15c8" />
+- Total Orders
+- Total Revenue
+- Revenue Distribution
+- Monthly Sales
+- Order Status
+- Product Categories
+- Customer Insights
+- Interactive Charts
 
+---
 
+# Key Performance Indicators
 
-📌Total Revenue metric
+The dashboard provides important KPIs such as:
 
-Displays the total revenue made by all orders, enabling someone to more effectively assess the entire business performance.
+- Total Orders
+- Total Revenue
+- Average Order Value
+- Payment Analysis
+- Sales Distribution
+- Product Performance
 
-<img width="676" height="150" alt="revenue" src="https://github.com/user-attachments/assets/9462a835-b942-4e39-b3d0-1a8ca2964e0f" />
+---
 
+# Business Insights
 
+Some insights generated from the analysis include:
 
-📌Orders by Status chart
+- Revenue trends across orders
+- Customer purchasing behavior
+- Best-selling product categories
+- Payment preferences
+- Seller performance
+- Order status distribution
 
-Visualizes the distribution of orders corresponding their current status, such as delivered, shipped, cancelled or so on.
+---
 
-<img width="889" height="347" alt="image" src="https://github.com/user-attachments/assets/93dbdab5-bc88-45a4-b210-b5c211a4d976" />
+# Skills Demonstrated
 
+- Python Programming
+- Data Cleaning
+- Exploratory Data Analysis
+- SQL
+- Database Management
+- AWS Cloud
+- Amazon S3
+- Amazon Athena
+- Dashboard Development
+- Streamlit
+- Git
+- GitHub
+
+---
+
+# Future Improvements
+
+- Deploy Streamlit on AWS EC2
+- Connect with Amazon RDS
+- Automate ETL using AWS Glue
+- Schedule data refresh
+- Build Power BI Dashboard
+- Add Machine Learning Prediction Model
+
+---
+
+# How to Run
+
+## Clone Repository
+
+```bash
+git clone https://github.com/yourusername/AWS-E-Commerce-Python-Cloud-Project.git
+```
+
+## Install Requirements
+
+```bash
+pip install -r requirements.txt
+```
+
+## Run Streamlit
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# Requirements
+
+- Python 3.x
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Streamlit
+- MySQL
+- AWS CLI
+- Boto3
+
+---
+
+# Learning Outcomes
+
+This project helped in understanding:
+
+- End-to-end Data Analytics Workflow
+- Cloud Data Storage
+- SQL Analysis
+- Data Visualization
+- Dashboard Development
+- Cloud Query Processing
+- Version Control using Git
+
+---
